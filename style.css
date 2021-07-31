@@ -1,0 +1,127 @@
+body{
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+.window{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    border: 3px solid tomato;
+    position: relative;
+    overflow: hidden;
+}
+img{
+    width: 600px;
+    height: 400px;
+    
+}
+
+/*for Animated Carousel*/
+#slider{
+    display: flex;
+    animation: Animate 20s linear 0s infinite;
+    animation-direction: alternate;
+
+
+}
+
+@keyframes Animate{
+    /* 0% {
+        transform: translateX(0px);
+      }
+    14.28%{
+        transform: translateX(0px);
+    }
+
+    28.56%{
+        transform: translateX(-600px);
+    } 
+    42.84%{
+        transform: translateX(-600px);       
+    }
+    57.12% {
+        transform: translateX(-1200px);
+
+    }
+    71.4%{
+        transform: translateX(-1200px);
+    }
+    85.68%{
+        transform: translateX(-1800px);
+
+    }
+    100% {
+        transform: translateX(-1800px);
+    }  */
+
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-300%);
+    }
+
+}
+
+/*for Javascript Carousel*/
+#click{
+    display: flex;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    top: -55%;
+    height: 10%;
+   
+
+}
+button {
+    background-color: Transparent;
+    border: none;
+    color: tomato;
+    font-size: 50px;   
+}
+
+
+
+
+
+
+/* For the Transistion Carousel */
+#transition{
+    animation: 20s ease-in-out 0s oscillate infinite alternate;
+}
+
+.hidden{
+    visibility: hidden;
+    background-size: cover;   
+}
+
+@keyframes oscillate {
+
+    0% {
+      /* transform: translateX(); */
+      background-image: url(./images/redpanda.jpg)
+    }
+    33% {
+      /* transform: translateX(-400px); */
+      background-image: url(./images/himalaya.jpeg)
+      
+    }
+    66% {
+      /* transform: translateX(-800px); */
+      background-image: url(./images/bigpanda.jpg)
+    }
+    100% {
+      /* transform: translateX(); */
+      background-image: url(./images/chinaforest.jpg)
+    }
+
+  }
